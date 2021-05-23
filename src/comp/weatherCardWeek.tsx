@@ -1,15 +1,19 @@
 import React from 'react';
 
-export default function WeatherCardWeek({info, style}) {
-    const {dt, temp, weather} = info;
-    const {max } = temp;
-    const {icon } = weather[0];
-    let dateUtc = new Date(+dt * 1000); 
-    // console.log(weather);
-    let weatherCels = Math.round(+max - 273.15);
+interface CardProps {
+    info:{dt:any; temp:{max:string}; weather:object[]};
+    style:string
+}
 
-    const month = dateUtc.getMonth()+1;
-    const months = {
+const WeatherCardWeek : React.FC<CardProps> = ({info, style}) => {
+    const {dt, temp, weather} = info;
+    const { max } = temp;
+    const { icon }:any = weather[0];
+    let dateUtc:any = new Date(+dt * 1000);
+    let weatherCels:number = Math.round(+max - 273.15);
+
+    const month:string = `${dateUtc.getMonth()+1}`;
+    const months:any = {
         1: 'jan',
         2: 'feb',
         3: 'mar',
@@ -23,8 +27,7 @@ export default function WeatherCardWeek({info, style}) {
         11: 'nov',
         12: 'dec'
     }
-    const transformMonth = months[month];
-    console.log(info);
+    const transformMonth:any = months[month];
     return (
         <>
            <div className={`weather__card ${style ? "weather__card_"+style : ''}`}>
@@ -37,3 +40,5 @@ export default function WeatherCardWeek({info, style}) {
         </>
     )
 }
+
+export default WeatherCardWeek;

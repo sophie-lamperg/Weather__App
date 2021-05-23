@@ -78,6 +78,7 @@ export default function WeatherPast(){
         let date = new Date();
         setMaxDate(`${date.getFullYear()}-0${date.getMonth()+1}-${date.getDate()}`);
     }
+
     return (
         <>
         <div className="weather__widget">
@@ -87,10 +88,15 @@ export default function WeatherPast(){
             <div className="weather__inputs">
                 <select id="city__past"  className="weather__select" name="city__past" type="text" onChange={handleChange}>
                 <option selected disabled>Select city</option>
+                    {/*@ts-ignore*/}
                     <option lat={'53.195873'} lon={'50.100193'}>Самара</option>
+                    {/*@ts-ignore*/}
                     <option lat={'53.507836'} lon={'49.420393'}>Тольятти</option>
+                    {/*@ts-ignore*/}
                     <option lat={'51.533557'} lon={'46.034257'}>Саратов</option>
+                    {/*@ts-ignore*/}
                     <option lat={'55.796127'} lon={'49.106405'}>Казань</option>
+                    {/*@ts-ignore*/}
                     <option lat={'45.035470'} lon={'38.975313'}>Краснодар</option>
                 </select>
                 <input className="weather__input" type="date" placeholder="Date" min={minDate} max={maxDate} onChange={handleChange}/>

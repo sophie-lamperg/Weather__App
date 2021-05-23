@@ -1,10 +1,14 @@
 import React from 'react';
 
-export default function WeatherCard({info}) {
+interface CardProps {
+    info:{date:string; weather:string; icon:string};
+}
+
+const WeatherCard: React.FC<CardProps> = ({info}) => {
     const {date, weather, icon} = info;
-    let dateUtc = new Date(+date * 1000); 
-    const month = dateUtc.getMonth()+1;
-    const months = {
+    let dateUtc:any = new Date(+date * 1000);
+    const month:string = `${dateUtc.getMonth()+1}`;
+    const months:any = {
         1: 'jan',
         2: 'feb',
         3: 'mar',
@@ -18,9 +22,8 @@ export default function WeatherCard({info}) {
         11: 'nov',
         12: 'dec'
     }
-    const transformMonth = months[month];
-    console.log(weather);
-    let weatherCels = `${Math.round(+weather - 273.15)}`;
+    const transformMonth:string = months[month];
+    let weatherCels:number = +`${Math.round(+weather - 273.15)}`;
     
     return (
         <>
@@ -35,3 +38,5 @@ export default function WeatherCard({info}) {
         </>
     )
 }
+
+export default WeatherCard;

@@ -1,5 +1,6 @@
 import React from 'react';
-import defaultWeatherIcon from '../img/Placeholder/Academy-Weather-bg160.svg'
+// @ts-ignore
+import defaultWeatherIcon from '../img/Placeholder/Academy-Weather-bg160.svg';
 
 export default function WeatherCardPlug() {
     return (<>

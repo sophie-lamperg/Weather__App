@@ -1,5 +1,4 @@
 import React from 'react';
-import WeatherCard from './weatherCard';
 import WeatherCardPlug from './weatherCardPlug';
 import WeatherCardWeek from './weatherCardWeek';
 import Api from '../utils/api';
@@ -101,10 +100,15 @@ export default function WeatherNextWeek(){
             {/* <form action=""> */}
                 <select id="city__week" className="weather__select" type="text" onChange={handleChange}>
                 <option selected disabled>Select city</option>
+                    {/*@ts-ignore*/}
                     <option lat={'53.195873'} lon={'50.100193'}>Самара</option>
+                    {/*@ts-ignore*/}
                     <option lat={'53.507836'} lon={'49.420393'}>Тольятти</option>
+                    {/*@ts-ignore*/}
                     <option lat={'51.533557'} lon={'46.034257'}>Саратов</option>
+                    {/*@ts-ignore*/}
                     <option lat={'55.796127'} lon={'49.106405'}>Казань</option>
+                    {/*@ts-ignore*/}
                     <option lat={'45.035470'} lon={'38.975313'}>Краснодар</option>
                 </select>
                 </div>
