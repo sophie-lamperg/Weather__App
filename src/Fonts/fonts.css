@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'Ubuntu-Bold';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('U.ttf');
+}
+
+@font-face {
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('TitilliumWeb-Bold.ttf');
+}

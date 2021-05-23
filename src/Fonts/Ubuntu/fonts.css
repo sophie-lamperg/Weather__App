@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'Ubuntu-Bold';
+    src: url('Ubuntu-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Ubuntu-BoldItalic';
+    src: url('Ubuntu-BoldItalic.ttf');
+}
+@font-face {
+    font-family: 'Ubuntu-Italic';
+    src: url('Ubuntu-Italic.ttf');
+}
+@font-face {
+    font-family: 'Ubuntu-Light';
+    src: url('Ubuntu-Light.ttf');
+}
+@font-face {
+    font-family: 'Ubuntu-LightItalic';
+    src: url('Ubuntu-LightItalic.ttf');
+}
+@font-face {
+    font-family: 'Ubuntu-Medium';
+    src: url('Ubuntu-Medium.ttf');
+}
+@font-face {
+    font-family: 'Ubuntu-MediumItalic';
+    src: url('Ubuntu-MediumItalic.ttf');
+}
+@font-face {
+    font-family: 'Ubuntu-Regular';
+    src: url('Ubuntu-Regular.ttf');
+}
