@@ -1,0 +1,10 @@
+.weather__header{
+    text-align: left;
+    width: 100%;
+    font-family: Ubuntu-Bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 32px;
+    color: #2C2D76;
+}

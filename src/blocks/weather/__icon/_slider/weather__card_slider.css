@@ -1,0 +1,8 @@
+.weather__icon_slider{
+    width: 120px;
+    height: 120px;
+}
+
+.weather__card_slider:last-child {
+    margin-right: 0;
+}

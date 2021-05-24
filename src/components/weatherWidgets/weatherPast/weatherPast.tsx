@@ -1,22 +1,22 @@
 import React from 'react';
-import WeatherCard from './weatherCard';
-import WeatherCardPlug from './weatherCardPlug';
-import Api from '../utils/api';
-import {BASEURL_PAST, APIKEY, selectWeatherPast} from '../utils/constans';
+import WeatherCard from '../../weatherCards/weatherCard';
+import WeatherCardPlug from '../../weatherCards/weatherCardPlug';
+import Api from '../../../utils/api';
+import {BASEURL_PAST, APIKEY, selectWeatherPast} from '../../../utils/constans';
+import {IdataForReq, IWeatherInfoPast} from "../../../types/types";
 
 
-export default function WeatherPast(){
+const WeatherPast:React.FC = () =>{
 
-    const [dataForReq, setDataForReq] = React.useState({
+    const [dataForReq, setDataForReq] = React.useState<IdataForReq>({
         lat: '',
         lon: '',
         dt: ''
     });
 
-    const [cords, setCords] = React.useState([]);
-    const [minDate, setMinDate] = React.useState('');
-    const [maxDate, setMaxDate] = React.useState('');
-    const [weatherInfo, setWeatherInfo] = React.useState({
+    const [minDate, setMinDate] = React.useState<string>('');
+    const [maxDate, setMaxDate] = React.useState<string>('');
+    const [weatherInfo, setWeatherInfo] = React.useState<IWeatherInfoPast>({
         date: '',
         weather: '',
         icon: ''
@@ -49,14 +49,14 @@ export default function WeatherPast(){
         }
     }, [dataForReq])
 
-    const handleChange = (e) => {
+    const handleChange = (e:any) => {
         const {lat, lon, dt } = dataForReq;
 
         if (e.target === document.querySelector('input[type=date]')) {
             const dtVal = e.target.value;
             const dtValUnix = new Date(dtVal).getTime() / 1000;
             setDataForReq({...dataForReq, 
-                            dt:dtValUnix})
+                            dt: ""+dtValUnix})
                             
         } else if(e.target === document.querySelector(selectWeatherPast)){
                 const latVal = e.target[e.target.selectedIndex].attributes.lat.value;
@@ -83,9 +83,7 @@ export default function WeatherPast(){
         <>
         <div className="weather__widget">
         <h2 className="weather__header">Forecast for a Date in the Past</h2>
-        
-            <form name="weather__past" action="">
-            <div className="weather__inputs">
+            <div className="weather__inputs">{/*@ts-ignore*/}
                 <select id="city__past"  className="weather__select" name="city__past" type="text" onChange={handleChange}>
                 <option selected disabled>Select city</option>
                     {/*@ts-ignore*/}
@@ -100,10 +98,12 @@ export default function WeatherPast(){
                     <option lat={'45.035470'} lon={'38.975313'}>Краснодар</option>
                 </select>
                 <input className="weather__input" type="date" placeholder="Date" min={minDate} max={maxDate} onChange={handleChange}/>
-                </div> </form>
+                </div>
                { (date && weather && icon ? (<WeatherCard info = {weatherInfo}/>) : (<WeatherCardPlug/>))}
         </div>
         </>
         
     )
 }
+
+export default WeatherPast;

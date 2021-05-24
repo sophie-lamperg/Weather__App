@@ -1,0 +1,17 @@
+.footer__text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 46px;
+    padding-bottom: 16px;
+}
+
+@media(min-width: 320px) and (max-width: 768px){
+    .footer__text {
+        padding-top: 78px;
+    }
+}

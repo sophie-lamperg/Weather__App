@@ -1,0 +1,14 @@
+.slider__button {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+@media(min-width: 320px) and (max-width: 768px){
+    .slider__button {
+        display: none;
+    }
+}

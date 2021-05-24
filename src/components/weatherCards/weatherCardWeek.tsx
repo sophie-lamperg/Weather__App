@@ -1,4 +1,5 @@
 import React from 'react';
+import {IWeatherUpData} from "../../types/types";
 
 interface CardProps {
     info:{dt:any; temp:{max:string}; weather:object[]};

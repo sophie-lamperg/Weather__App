@@ -1,0 +1,10 @@
+.slider {
+    width: 548px;
+    position: relative;
+}
+
+@media(min-width: 320px) and (max-width: 768px){
+    .slider {
+        width: 254px;
+    }
+}

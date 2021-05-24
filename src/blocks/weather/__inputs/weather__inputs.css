@@ -1,0 +1,13 @@
+.weather__inputs{
+    display: flex;
+    justify-content: space-between;
+    width: 544px;
+    padding-top: 32px;
+}
+
+@media(min-width: 320px) and (max-width: 768px){
+    .weather__inputs {
+        flex-direction: column;
+        width: 100%;
+    }
+}

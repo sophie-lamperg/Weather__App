@@ -1,8 +1,8 @@
 import React from 'react';
-import WeatherPast from './weatherPast';
-import WeatherNextWeek from './weatherNextWeek'
+import WeatherPast from '../weatherWidgets/weatherPast/weatherPast';
+import WeatherNextWeek from '../weatherWidgets/weatherOnNextWeek/weatherNextWeek';
 
- export default function Main(){
+const Main: React.FC = () => {
     return (
         <>
         <div className="weathers__container">
@@ -12,4 +12,6 @@ import WeatherNextWeek from './weatherNextWeek'
        
         </>
     )
-} 
+}
+
+export default Main;

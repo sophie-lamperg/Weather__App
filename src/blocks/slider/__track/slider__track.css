@@ -1,0 +1,7 @@
+.slider__track {
+    display: flex;
+    overflow: hidden;
+    width:  100%;
+    justify-content: space-between;
+    height: 320px;
+}

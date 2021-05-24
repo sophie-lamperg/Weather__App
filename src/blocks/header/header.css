@@ -1,0 +1,14 @@
+.header {
+    font-weight: bold;
+    font-size: 102px;
+    line-height: 100%;
+    color: #FFFFFF;
+    position: relative;
+}
+
+@media (min-width: 320px) and (max-width: 768px){
+    .header{
+        font-size: 32px;
+        margin-top: 32px;
+    }
+}

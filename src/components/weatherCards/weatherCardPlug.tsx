@@ -1,8 +1,8 @@
 import React from 'react';
 // @ts-ignore
-import defaultWeatherIcon from '../img/Placeholder/Academy-Weather-bg160.svg';
+import defaultWeatherIcon from '../../img/Placeholder/Academy-Weather-bg160.svg';
 
-export default function WeatherCardPlug() {
+const WeatherCardPlug: React.FC = () => {
     return (<>
       <div className="weather__card weather__card_default">
             <div className="weather__icon">
@@ -13,3 +13,5 @@ export default function WeatherCardPlug() {
         </div>
     </>)
 }
+
+export default WeatherCardPlug;

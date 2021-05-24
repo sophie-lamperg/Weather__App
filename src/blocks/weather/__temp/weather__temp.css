@@ -1,0 +1,12 @@
+.weather__temp {
+    align-self: flex-end;
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 32px;
+    color: #FFFFFF;
+}
+.weather__temp::after {
+    content: '\00B0';
+}
