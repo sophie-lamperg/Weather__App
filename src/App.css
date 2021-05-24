@@ -1,4 +1,5 @@
 @import "../src/Fonts/Ubuntu/fonts.css";
+@import "../src/utils/normalize.css";
 
 @import "./blocks/page/page.css";
 @import "./blocks/page/__container/page__container.css";

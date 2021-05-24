@@ -1,8 +1,8 @@
 .page__background_desktop-bottom {
     background-image: url("../../../../../img/Background/Academy-Weather_forecast-Bg-buttom.png");
     background-position-x: left;
-    bottom: -86px;
-    left: 0;
+    bottom: -80px;
+    /* left: 0; */
     background-position-y: bottom;
 
 }
