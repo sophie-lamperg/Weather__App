@@ -13,6 +13,12 @@
 
 @import "./blocks/weathers/weathers__container/weathers__container.css";
 
+@import "./blocks/slider/slider.css";
+@import "./blocks/slider/__track/slider__track.css";
+@import "./blocks/slider/__button/slider__button.css";
+@import "./blocks/slider/__button/_next/slider__button_next.css";
+@import "./blocks/slider/__button/_prev/slider__button_prev.css";
+
 @import "./blocks/weather/__title/weather__title.css";
 @import "./blocks/weather/__card/weather__card.css";
 @import "./blocks/weather/__card/_slider/weather__card_slider.css";

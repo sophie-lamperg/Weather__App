@@ -1,5 +1,6 @@
 .slider__button_prev{
     top: 50%;
     left: -34px;
-    background-image: url('./img/icons/24/chevron-left.png');
+    background-image: url('../../../../img/icons/24/chevron-left.png');
+
 }
